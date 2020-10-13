@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Chess - moriya:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Chess___moriya_jar</output-path>
+    <root id="archive" name="Chess - moriya.jar">
+      <element id="module-output" name="Chess - moriya" />
+    </root>
+  </artifact>
+</component>
