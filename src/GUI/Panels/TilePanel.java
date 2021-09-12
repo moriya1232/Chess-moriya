@@ -71,7 +71,8 @@ public class TilePanel extends JPanel {
                                 System.out.println("GAME OVER");
                                 BoardPanel.tileCoordinatePressed = GAME_OVER;
                             }
-                            boardPanel.getGame().doneHumanMove();
+                            boardPanel.doneHumanMove();
+//                            boardPanel.getGame().doneHumanMove();
                         }
                     }
                 }

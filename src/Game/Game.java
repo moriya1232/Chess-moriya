@@ -30,12 +30,12 @@ public class Game {
         this.jframe.setVisible(true);
     }
 
-    public void doneHumanMove(){
-        Board board =this.boardPanel.getBoard();
-        if (board.getCurrentPlayer().getTypePlayer() == TypePlayer.COMPUTER) {
-            ComputerMoveMaker.makeComputerMove(this.boardPanel);
-        }
-    }
+//    public void doneHumanMove(){
+//        Board board =this.boardPanel.getBoard();
+//        if (board.getCurrentPlayer().getTypePlayer() == TypePlayer.COMPUTER) {
+//            ComputerMoveMaker.makeComputerMove(this.boardPanel);
+//        }
+//    }
     public static void printWritingMoves(Move move, Board board) {
         if (BoardUtils.getOppositeAlliance(board.getTurn()) == Alliance.WHITE) {
             int counterMoves = (board.getCounterMoves()/2)+1;

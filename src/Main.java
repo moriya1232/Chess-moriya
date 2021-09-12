@@ -8,5 +8,7 @@ public class Main {
         Board.Builder builder = new Board.Builder();
         Board board = builder.buildStandartBoard(TypePlayer.HUMAN, TypePlayer.COMPUTER);
         Game t = new Game(board);
+
+
     }
 }

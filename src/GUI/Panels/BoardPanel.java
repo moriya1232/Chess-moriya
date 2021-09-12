@@ -1,8 +1,8 @@
 package GUI.Panels;
 
+import ComputerMoves.ComputerMoveMaker;
 import Game.Game;
-import com.chess.engine.Moves.Move;
-import com.chess.engine.Moves.MoveTransition;
+import Players.TypePlayer;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Tile;
 
@@ -14,13 +14,13 @@ public class BoardPanel extends JPanel {
 
     private Board board;
     private ArrayList<TilePanel> tilePanels;
-    private Game game;
+//    private Game game;
     public static int tileCoordinatePressed = -1;
 
 
     public BoardPanel(Board board, Game game){
         super(new GridLayout(8,8));
-        this.game = game;
+//        this.game = game;
         updateMembers(board);
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         setBackground(Color.decode("#8B4726"));
@@ -67,7 +67,14 @@ public class BoardPanel extends JPanel {
         repaint();
     }
 
-    public Game getGame() {
-        return game;
+    public void doneHumanMove(){
+        Board board =this.getBoard();
+        if (board.getCurrentPlayer().getTypePlayer() == TypePlayer.COMPUTER) {
+            ComputerMoveMaker.makeComputerMove(this);
+        }
     }
+
+//    public Game getGame() {
+//        return game;
+//    }
 }
